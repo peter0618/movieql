@@ -127,3 +127,22 @@ export const deleteMovieById = id => {
         return null;
     }
 };
+
+export const addMovie = (name, score) => {
+    let maxId = 0;
+    // 새로운 아이디 채번을 위해 maxId 를 계산합니다.
+    for(let movie of movies){
+        if(maxId < movie.id){
+            maxId = movie.id
+        }
+    }
+
+    const newMovie = {
+        id: maxId + 1,
+        name,
+        score
+    };
+
+    movies.push(newMovie);
+    return newMovie;
+};

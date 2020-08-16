@@ -51,5 +51,5 @@ type Query {
 
 type Mutation {
     deleteMovie(id: Int!): Movie
-#    addMovie(name: String!, score: String!)
+    addMovie(name: String!, score: Int!): Movie
 }
