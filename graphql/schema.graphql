@@ -1,16 +1,24 @@
 type Person {
     """
+    아이디
+    """
+    id: Int!
+
+    """
     이름
     """
     name: String!
+
     """
     나이
     """
     age: Int!
+
     """
     성별
     """
     gender: String!
+
     """
     전공
     """
@@ -18,5 +26,6 @@ type Person {
 }
 
 type Query{
-    person: Person!
+    people: [Person]!
+    person(id: Int!): Person
 }
