@@ -1,0 +1,22 @@
+type Person {
+    """
+    이름
+    """
+    name: String!
+    """
+    나이
+    """
+    age: Int!
+    """
+    성별
+    """
+    gender: String!
+    """
+    전공
+    """
+    major: String!
+}
+
+type Query{
+    person: Person!
+}
