@@ -71,11 +71,48 @@ const people = [
     },
 ];
 
+const movies = [
+    {
+        id: 1,
+        name: "Avengers 1",
+        score: 99
+    },
+    {
+        id: 2,
+        name: "Logan",
+        score: 80
+    },
+    {
+        id: 3,
+        name: "Avengers 3",
+        score: 95
+    },
+    {
+        id: 4,
+        name: "Hulk",
+        score: 60
+    },
+    {
+        id: 5,
+        name: "Star Wars - The new one",
+        score: 40
+    }
+];
+
 export const getPeople = () => {
     return people;
 };
 
 export const getPersonById = id => {
     const data = people.filter(person => person.id === id);
+    return data[0];
+};
+
+export const getMovies = () => {
+    return movies;
+};
+
+export const getMovieById = id => {
+    const data = movies.filter(movie => movie.id === id);
     return data[0];
 };

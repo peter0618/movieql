@@ -25,7 +25,26 @@ type Person {
     major: String!
 }
 
+type Movie {
+    """
+    아이디
+    """
+    id: Int!
+
+    """
+    이름
+    """
+    name: String!
+
+    """
+    평점
+    """
+    score: Int!
+}
+
 type Query{
     people: [Person]!
     person(id: Int!): Person
+    movies: [Movie]!
+    movie(id: Int!): Movie
 }
