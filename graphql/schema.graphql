@@ -1,29 +1,29 @@
-type Person {
-    """
-    아이디
-    """
-    id: Int!
-
-    """
-    이름
-    """
-    name: String!
-
-    """
-    나이
-    """
-    age: Int!
-
-    """
-    성별
-    """
-    gender: String!
-
-    """
-    전공
-    """
-    major: String!
-}
+#type Person {
+#    """
+#    아이디
+#    """
+#    id: Int!
+#
+#    """
+#    이름
+#    """
+#    name: String!
+#
+#    """
+#    나이
+#    """
+#    age: Int!
+#
+#    """
+#    성별
+#    """
+#    gender: String!
+#
+#    """
+#    전공
+#    """
+#    major: String!
+#}
 
 type Movie {
     """
@@ -32,24 +32,39 @@ type Movie {
     id: Int!
 
     """
-    이름
+    영화제목
     """
-    name: String!
+    title: String!
 
     """
     평점
     """
-    score: Int!
+    rating: Float!
+
+    """
+    요약
+    """
+    summary: String!
+
+    """
+    언어
+    """
+    language: String!
+
+    """
+    커버 이미지
+    """
+    medium_cover_image: String!
 }
 
 type Query {
-    people: [Person]!
-    person(id: Int!): Person
-    movies: [Movie]!
-    movie(id: Int!): Movie
+#    people: [Person]!
+#    person(id: Int!): Person
+    movies(limit: Int, minimum_rating: Float): [Movie]!
+#    movie(id: Int!): Movie
 }
 
-type Mutation {
-    deleteMovie(id: Int!): Movie
-    addMovie(name: String!, score: Int!): Movie
-}
+#type Mutation {
+#    deleteMovie(id: Int!): Movie
+#    addMovie(name: String!, score: Int!): Movie
+#}
